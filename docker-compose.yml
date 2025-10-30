@@ -1,0 +1,11 @@
+networks:
+  cron_network:
+    driver: bridge
+
+services:
+  cron:
+    build: .
+    container_name: cron_test
+    environment:
+      CRON_INTERVAL_MINUTES: ${CRON_INTERVAL_MINUTES}
+    entrypoint: ["sh", "-c", "/app/entry_point.sh"]

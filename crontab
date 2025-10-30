@@ -1,0 +1,1 @@
+*/CRON_INTERVAL_MINUTES * * * * /app/cron_test.sh
